@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>演出物品清单</title>
+    <style>
+        body {
+            background-color: #F4F4F4;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #waitChooseArea {
+            min-height: 80px;
+        }
+
+        #waitChooseArea p {
+            color: #1E9FFF;
+            font-weight: 600;
+        }
+
+        #waitChooseArea .tagsBox {
+            background-color: #efefef;
+        }
+
+        .row {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            /* margin-right: -15px;
+            margin-left: -15px; */
+        }
+
+        #waitChooseArea .tagitem {
+            margin: 10px;
+            cursor: pointer;
+
+            position: relative;
+            width: 30%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        #waitChooseArea .tagitem.ischoose {
+            color: #669900;
+            font-weight: 600;
+            background: url(https://www.jq22.com/demo/jqueryrichui201901242258/img/checked.svg) no-repeat right bottom;
+            background-size: auto auto;
+            border: 3px solid #00a4ff;
+            background-size: 21px 21px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>物品清单</h1>
+    <div class="container">
+
+        <div id="waitChooseArea">
+            <p class="ischoose" onclick="openTag(this)">舞台</p>
+            <div class="tagsBox row">
+
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
+
+            </div>
+        </div>
+
+
+        <div id="waitChooseArea" class="hid">
+            <p class="unchoose" onclick="openTag(this)">背景</p>
+            <div class="tagsBox row">
+
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
+
+            </div>
+        </div>
+
+        <div id="waitChooseArea" class="hid">
+            <p class="unchoose" onclick="openTag(this)">灯光</p>
+            <div class="tagsBox row">
+
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">光束</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">面光</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">染色</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
+
+            </div>
+        </div>
+
+        <div id="waitChooseArea" class="hid">
+            <p class="unchoose" onclick="openTag(this)">音响</p>
+            <div class="tagsBox row">
+
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="./index.js"></script>
+    <script>
+        $('.hid').find('.tagsBox').slideUp();
+
+        function checkTag(i) {
+
+            if ($(i).hasClass('ischoose')) {
+                //已经被选上了
+                $(i).removeClass('ischoose').addClass('unchoose');
+                return
+            }
+
+            if ($(i).hasClass('unchoose')) {
+                //未被选上 
+                //添加选中效果//添加到已选标签区域
+                $(i).removeClass('unchoose');
+
+                // $('<span class="col-sm-2 tagitem" data-name="' + $(i).text() + '">' + $(i).text() + '</span>').appendTo('#choosedArea');
+
+                $(i).addClass('ischoose')
+                return
+            }
+
+        }
+
+        function openTag(i) {
+            if ($(i).hasClass('unchoose')) {
+                //未被选上 
+                //添加选中效果
+                $(i).removeClass('unchoose');
+
+
+                $(i).addClass('ischoose')
+                $(i).parent('div').find('.tagsBox').slideDown('slow');
+                return
+            }
+
+            if ($(i).hasClass('ischoose')) {
+                //未被选上 
+                //添加选中效果
+                $(i).removeClass('ischoose');
+
+
+                $(i).addClass('unchoose')
+                $(i).parent('div').find('.tagsBox').slideUp('slow');
+                return
+            }
+        }
+    </script>
+</body>
+
+</html>
