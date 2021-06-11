@@ -17,7 +17,7 @@
   }
   
   body {
-    grid-gap: 2em;
+    grid-gap: 1em;
     grid-template-columns: repeat(auto-fit, Min(100%, 9rem));
     place-content: center;
     min-height: 100vh;
@@ -43,7 +43,7 @@
     transform: perspective(25em);
     background: #fff content-box;
     filter: drop-shadow(4px 4px 13px);
-    animation: card 1s ease-out var(--dt0) backwards, cost 1s var(--dt4) backwards;
+    animation: card 2s ease-out var(--dt0) backwards, cost 1s var(--dt4) backwards;
   }
   article ::before, article ::after, article a {
     --j: 1;
@@ -66,7 +66,7 @@
     background: linear-gradient(var(--grad));
     color: #fff;
     /* counter-reset: cost attr(data-name); */
-    animation: head 1s ease-out var(--dt1) backwards;
+    animation: head 2s ease-out var(--dt1) backwards;
   }
   header::before {
     place-self: center;
@@ -75,14 +75,14 @@
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    animation: ring 1s ease-out var(--dt3) backwards;
+    animation: ring 2s ease-out var(--dt3) backwards;
     content: '宏科传媒';
   }
   header::after {
     height: 4px;
     background: currentcolor;
     clip-path: inset(0 round 4px);
-    animation: line 1s ease-out var(--dt2) backwards;
+    animation: line 2s ease-out var(--dt2) backwards;
     content: "";
   }
   
@@ -106,7 +106,7 @@
     place-self: center;
     -webkit-mask: var(--mask);
     mask: var(--mask);
-    animation: text 1s ease-out var(--dt5) backwards;
+    animation: text 2s ease-out var(--dt5) backwards;
   }
   h3::before {
     --j: 0;
@@ -138,7 +138,7 @@
     -webkit-mask: var(--mask);
     mask: var(--mask);
     cursor: pointer;
-    animation: text 1s ease-out var(--dt2) backwards;
+    animation: text 2s ease-out var(--dt2) backwards;
   }
   
   @keyframes text {
