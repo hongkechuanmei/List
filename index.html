@@ -29,15 +29,20 @@
             <a href="show/index.html">点击进入</a>
         </section>
     </article>
-    <!-- 第三个 -->
-    <!-- <article style="--i: 2; --cost: 29; --grad: #f7ea1f, #f87d2c">
-        <header>
-            <h3 data-name="premium"></h3>
-        </header>
-        <section>
-            <button>点击进入</button>
-        </section>
-    </article> -->
+
+    <script src="show/jquery-3.6.0.js"></script>
+    <script>
+        $().ready(function () {
+            $('article').css('animation', 'card 2s ease-out var(--dt0) backwards, cost 1s var(--dt4) backwards');
+            $('header').css('animate', 'head 2s ease-out var(--dt1) backwards')
+            $('header::before').css('animate', 'ring 2s ease-out var(--dt3) backwards')
+            $('header::after').css('animate', 'line 2s ease-out var(--dt2) backwards')
+            $('h3::before').css('animate', 'text 2s ease-out var(--dt5) backwards')
+            $('h3::after').css('animate', 'text 2s ease-out var(--dt5) backwards')
+            $('section a').css('animate', 'text 2s ease-out var(--dt2) backwards')
+        })
+
+    </script>
 </body>
 
 </html>
