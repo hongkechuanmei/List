@@ -15,6 +15,12 @@
             text-align: center;
         }
 
+        input {
+            width: 62%;
+            margin-left: -13%;
+            text-indent: 43%;
+        }
+
         #waitChooseArea {
             min-height: 80px;
         }
@@ -55,6 +61,21 @@
             border: 3px solid #00a4ff;
             background-size: 21px 21px;
         }
+
+        #waitChooseArea span.submit {
+            display: inline-block;
+            margin: 0 5px;
+            width: 70px;
+            height: 25px;
+            line-height: 25px;
+            font-size: 12px;
+            text-align: center;
+            color: #fff;
+            border-radius: 13px;
+            background: #e1251b;
+            -webkit-transition: background .3s ease, color .3s ease;
+            transition: background .3s ease, color .3s ease;
+        }
     </style>
 </head>
 
@@ -62,27 +83,78 @@
     <h1>物品清单</h1>
     <div class="container">
 
-        <div id="waitChooseArea">
+        <!-- 舞台 -->
+        <div id="waitChooseArea" class="stage">
             <p class="ischoose" onclick="openTag(this)">舞台</p>
             <div class="tagsBox row">
 
-                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
-                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
-                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
-                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">室内</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">室外</span>
+
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">舞台长</span>
+                <select class="tagitem">
+                    <option value="">1米</option>
+                    <option value="">2米</option>
+                    <option value="">3米</option>
+                    <option value="">4米</option>
+                    <option value="">5米</option>
+                    <option value="">6米</option>
+                    <option value="">7米</option>
+                    <option value="">8米</option>
+                    <option value="">9米</option>
+                    <option value="">10米</option>
+                    <option value="">11米</option>
+                    <option value="">12米</option>
+                    <option value="">13米</option>
+                    <option value="">14米</option>
+                    <option value="">15米</option>
+                </select>
+
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">舞台宽</span>
+                <select class="tagitem">
+                    <option value="">1米</option>
+                    <option value="">2米</option>
+                    <option value="">3米</option>
+                    <option value="">4米</option>
+                    <option value="">5米</option>
+                    <option value="">6米</option>
+                    <option value="">7米</option>
+                    <option value="">8米</option>
+                    <option value="">9米</option>
+                    <option value="">10米</option>
+                    <option value="">11米</option>
+                    <option value="">12米</option>
+                    <option value="">13米</option>
+                    <option value="">14米</option>
+                    <option value="">15米</option>
+                </select>
+
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">地毯</span>
+                <span class="tagitem"><input type="text">平米</span>
+
+                <span class="tagitem submit">提交</span>
+
+
 
             </div>
+
         </div>
 
 
-        <div id="waitChooseArea" class="hid">
+        <div id="waitChooseArea" class="hid back">
             <p class="unchoose" onclick="openTag(this)">背景</p>
             <div class="tagsBox row">
 
-                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
-                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
-                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
-                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">桁架</span>
+                <span class="tagitem"><input type="text">米</span>
+
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">喷绘布</span>
+                <span class="tagitem"><input type="text">平米</span>
+
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">KT板</span>
+                <span class="tagitem"><input type="text">平米</span>
+
+                <span class="tagitem submit">提交</span>
 
             </div>
         </div>
@@ -92,9 +164,66 @@
             <div class="tagsBox row">
 
                 <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">光束</span>
+                <select class="tagitem">
+                    <option value="">1个</option>
+                    <option value="">2个</option>
+                    <option value="">3个</option>
+                    <option value="">4个</option>
+                    <option value="">5个</option>
+                    <option value="">6个</option>
+                    <option value="">7个</option>
+                    <option value="">8个</option>
+                    <option value="">9个</option>
+                    <option value="">10个</option>
+                    <option value="">11个</option>
+                    <option value="">12个</option>
+                    <option value="">13个</option>
+                    <option value="">14个</option>
+                    <option value="">15个</option>
+                </select>
+
+
                 <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">面光</span>
+                <select class="tagitem">
+                    <option value="">1个</option>
+                    <option value="">2个</option>
+                    <option value="">3个</option>
+                    <option value="">4个</option>
+                    <option value="">5个</option>
+                    <option value="">6个</option>
+                    <option value="">7个</option>
+                    <option value="">8个</option>
+                    <option value="">9个</option>
+                    <option value="">10个</option>
+                    <option value="">11个</option>
+                    <option value="">12个</option>
+                    <option value="">13个</option>
+                    <option value="">14个</option>
+                    <option value="">15个</option>
+                </select>
+
+
+
                 <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">染色</span>
-                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
+                <select class="tagitem">
+                    <option value="">1个</option>
+                    <option value="">2个</option>
+                    <option value="">3个</option>
+                    <option value="">4个</option>
+                    <option value="">5个</option>
+                    <option value="">6个</option>
+                    <option value="">7个</option>
+                    <option value="">8个</option>
+                    <option value="">9个</option>
+                    <option value="">10个</option>
+                    <option value="">11个</option>
+                    <option value="">12个</option>
+                    <option value="">13个</option>
+                    <option value="">14个</option>
+                    <option value="">15个</option>
+                </select>
+
+                <span class="tagitem submit">提交</span>
 
             </div>
         </div>
@@ -103,17 +232,20 @@
             <p class="unchoose" onclick="openTag(this)">音响</p>
             <div class="tagsBox row">
 
-                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
-                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
-                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
-                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">标签1</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">单15</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">双15</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)">线阵</span>
+                <span class="col-sm-2 tagitem unchoose" onclick="checkTag(this)"></span>
+
+
+                <span class="tagitem submit">提交</span>
+
 
             </div>
         </div>
     </div>
 
     <script src="./jquery-3.6.0.js"></script>
-    <script src="./index.js"></script>
     <script>
         $('.hid').find('.tagsBox').slideUp();
 
