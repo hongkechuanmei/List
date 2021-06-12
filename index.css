@@ -21,7 +21,7 @@
     grid-template-columns: repeat(auto-fit, Min(100%, 9rem));
     place-content: center;
     min-height: 80vh;
-    min-width: 100vh;
+    min-width: 100vw;
     background: #222;
     font: 900 1.25em/1.25 sans-serif;
     text-align: center;
