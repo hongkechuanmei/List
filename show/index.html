@@ -17,8 +17,15 @@
 
         input {
             width: 62%;
+            height: 99%;
             margin-left: -13%;
-            text-indent: 43%;
+            /* text-indent: 43%; */
+            display: inline-block;
+            border: .01rem solid #ebebeb;
+            border-radius: .85rem;
+            box-shadow: 9px 9px 10px rgb(200 200 200 / 19%);
+            padding-left: .8rem;
+            outline: none;
         }
 
         #waitChooseArea {
@@ -248,6 +255,13 @@
     <script src="./jquery-3.6.0.js"></script>
     <script>
         $('.hid').find('.tagsBox').slideUp();
+        if (window.innerWidth > 450) {
+            console.log('自动切换小屏模式，目前不兼容大屏')
+            $('body').css({
+                width: 450,
+                margin: '0 auto',
+            })
+        }
 
         function checkTag(i) {
 
@@ -267,7 +281,6 @@
                 $(i).addClass('ischoose')
                 return
             }
-
         }
 
         function openTag(i) {
@@ -293,6 +306,8 @@
                 return
             }
         }
+
+
     </script>
 </body>
 
